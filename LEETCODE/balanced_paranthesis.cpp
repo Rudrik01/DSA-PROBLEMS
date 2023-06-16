@@ -6,7 +6,8 @@
 ██║░░██║╚██████╔╝██████╔╝██║░░██║██║██║░╚██╗  ██║░░░░░██║░░██║░░░██║░░░███████╗███████╗
 ╚═╝░░╚═╝░╚═════╝░╚═════╝░╚═╝░░╚═╝╚═╝╚═╝░░╚═╝  ╚═╝░░░░░╚═╝░░╚═╝░░░╚═╝░░░╚══════╝╚══════╝
 Author:Rudrik Patel
-Topic: Balanced Paranthesis Problem
+Topic: Balanced Paranthesis Problem or 20. Valid Parentheses
+Link: https://leetcode.com/problems/valid-parentheses/description/
 */
 #include <iostream>
 #include <string>
