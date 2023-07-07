@@ -12,8 +12,6 @@ Link: https://leetcode.com/problems/find-the-winner-of-the-circular-game/descrip
 /*
 T(n) = T(n-1)+c
 Time Complexity: 0(n)
-
-
 */
 
 
