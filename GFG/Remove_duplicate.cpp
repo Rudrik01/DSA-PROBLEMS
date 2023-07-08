@@ -1,0 +1,53 @@
+/**
+██████╗░██╗░░░██╗██████╗░██████╗░██╗██╗░░██╗  ██████╗░░█████╗░████████╗███████╗██╗░░░░░
+██╔══██╗██║░░░██║██╔══██╗██╔══██╗██║██║░██╔╝  ██╔══██╗██╔══██╗╚══██╔══╝██╔════╝██║░░░░░
+██████╔╝██║░░░██║██║░░██║██████╔╝██║█████═╝░  ██████╔╝███████║░░░██║░░░█████╗░░██║░░░░░
+██╔══██╗██║░░░██║██║░░██║██╔══██╗██║██╔═██╗░  ██╔═══╝░██╔══██║░░░██║░░░██╔══╝░░██║░░░░░
+██║░░██║╚██████╔╝██████╔╝██║░░██║██║██║░╚██╗  ██║░░░░░██║░░██║░░░██║░░░███████╗███████╗
+╚═╝░░╚═╝░╚═════╝░╚═════╝░╚═╝░░╚═╝╚═╝╚═╝░░╚═╝  ╚═╝░░░░░╚═╝░░╚═╝░░░╚═╝░░░╚══════╝╚══════╝
+Author:Rudrik Patel
+Topic: Remove duplicate elements from sorted Array
+link: https://practice.geeksforgeeks.org/problems/remove-duplicate-elements-from-sorted-array/1
+*/
+
+/*
+    -->Naive Solution
+    Time Complexity: O(n)
+    Auxiliary Space: O(n)
+
+*/
+
+int rmdups(int arr[],int n){
+    int temp[n];
+    temp[0]=arr[0];
+    int res  = 1;
+    for (int  i = 0; i < n; i++){
+        if(temp[res-1]!=arr[i]){
+            temp[res]=arr[i];
+            res++
+        }
+    }
+    for(int i = 0;i<res;i++){
+        arr[i]=temp[i];
+    }
+    return res;
+    
+}
+
+
+/*
+    -->Efficient solution
+    Time Complexity: O(n)
+    Auxiliary Space: O(1)
+*/
+
+int rmdups(int arr[],int n){
+    int res = 1;
+    for(int i = 1;i<n;i++){
+        if(arr[i] != arr[res-1]){
+            arr[res] = arr[i];
+            res++;
+        }
+    }
+    return res;
+}
